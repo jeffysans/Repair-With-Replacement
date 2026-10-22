@@ -1,15 +1,15 @@
-Repair with Replacement 
+## Repair with Replacement 
 
 A full-stack web application for submitting product repair/replacement requests, comparing estimated costs, tracking request status, and managing requests through an admin dashboard.
 
-Team details
+## Team details
 - Project title: Repair with Replacement
 - Name : Jeffy sansuiya S
 - Register number : 711524BEE026   
 - Department : Electrical and Electronics Engineering
 - College : KIT-Kalaignarkarunanidhi Institute of Technology
 
-Features
+## Features
 - Responsive frontend built with HTML, CSS and JavaScript
 - Java Spring Boot REST API
 - MySQL persistence using Spring Data JPA
@@ -23,10 +23,10 @@ Features
 - Admin dashboard to update request status
 - Server-side validation for required fields, cost values and status choices
 
-Technologies
+## Technologies
 Java 17, Spring Boot 3, Spring Web, Spring Data JPA, MySQL, HTML5, CSS3, JavaScript, Maven, Git and GitHub.
 
-Requirements
+## Requirements
 - JDK 17 or newer
 - Maven 3.8+ (or use the Maven wrapper if you add one)
 - MySQL 8 or compatible
@@ -68,15 +68,15 @@ Example request body:
 }
 ```
 
-Recommendation logic
+## Recommendation logic
 For demonstration, the backend recommends repair only when repair cost is below 60% of replacement cost, reported condition is Excellent/Good, and product age is 5 years or less. Otherwise it recommends a replacement review. This is a rule-based decision aid, not AI image recognition or a professional diagnosis. A photo is stored for human/technician review. This is a configurable sample rule, not a professional diagnosis. Real costs and final decisions should be verified by a technician.
 
-Important limitations
+## Important limitations
 - The demo admin dashboard has no login/authentication. Do not deploy it publicly with real customer information until authentication and authorization are added.
 - The app accepts cost estimates from the form; it does not automatically diagnose damage from photos.
 - Use only test data for public demonstrations.
 
-GitHub upload
+## GitHub upload
 1. Create a new public or private GitHub repository named `Repair-With-Replacement`.
 2. In this folder, run:
    ```bash
@@ -100,5 +100,5 @@ GitHub upload
 - [ ] Status update persists after refresh
 
 
-Product photo upload
+## Product photo upload
 Customers can optionally attach a damaged-product image (JPG, PNG, WebP, or GIF; maximum 5 MB) when submitting a request. Spring Boot validates the upload and saves it under the local `uploads/` directory; the request record stores the image URL, and the admin dashboard shows a `View photo` link. Images are stored locally, so for deployment use persistent file storage and add authentication/authorization before handling real customer data. The image is for human review only; it does not automatically classify damage.
